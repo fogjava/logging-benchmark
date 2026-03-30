@@ -4,9 +4,10 @@ project(logging_benchmark)
 set(CMAKE_CXX_STANDARD 17)
 #find glog
 find_package(glog REQUIRED)
+find_package(spdlog REQUIRED)
 
 add_executable(bench
 	       src/main.cpp
 	       src/BenchmarkRunner.cpp
               )
-target_link_libraries(bench PRIVATE glog::glog)
+target_link_libraries(bench PRIVATE glog::glog spdlog::spdlog)
