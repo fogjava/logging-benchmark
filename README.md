@@ -57,3 +57,8 @@ To run the benchmark, simply execute the generated executable:
 
 ```bash
 ./bench
+
+### Plot
+To get the plot:
+```bash
+python3 ../scripts/plog_logging.py
