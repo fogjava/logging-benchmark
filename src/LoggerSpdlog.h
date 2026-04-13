@@ -3,6 +3,8 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <memory>
+#include "ctrack.hpp"
+
 class LoggerSpdlog : public LoggerModule {
  public:
     void init(int argc, char* argv[]) override final {
@@ -11,6 +13,7 @@ class LoggerSpdlog : public LoggerModule {
     }
 
     void log_info(const std::string& msg) override final {
+        CTRACK;
         logger_->info(msg);
     }
 

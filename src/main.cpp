@@ -19,5 +19,6 @@ int main(int argc, char** argv) {
    BenchmarkRunner runner1(&logger1, 4, 100000);
    runner1.run();
    logger1.shutdown();
+   ctrack::result_print();
    return 0;
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "LoggerModule.h"
+#include "ctrack.hpp"
 #include <glog/logging.h>
 class LoggerGlog : public LoggerModule {
  public:
@@ -9,6 +10,7 @@ class LoggerGlog : public LoggerModule {
      }
 
      void log_info(const std::string& msg) override final {
+         CTRACK;
          LOG(INFO) << msg;
      }
 
